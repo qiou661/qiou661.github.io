@@ -22,6 +22,10 @@
           <source src="./music/love.mp3" type="audio/mp3" />
       </audio>  
 	  <audio id="bgmusic" src="./music/love.mp3" autoplay="autoplay" loop="loop" style="display: block; width: 3%; height:3%;"></audio>
+	  <script>
+		audio = document.getElementById('bgmusic');
+		audio.play();
+	  </script>
     <script type="text/javascript">
   function toggleSound() {
             var music = document.getElementById("bgmusic");//获取ID
@@ -33,7 +37,8 @@
             }
 
         }
-setInterval("toggleSound()",1);
+//setInterval("toggleSound()",1);
+//audioAutoPlay('bgmusic');
 </script>
 
         <div id="main">
@@ -99,6 +104,7 @@ sh.onclick = function()
 {
 	var div1 = document.getElementById("clock-box");
 	show_hidden(div1);
+	toggleSound();
 	return false;
 }
 
