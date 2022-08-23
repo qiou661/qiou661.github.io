@@ -53,7 +53,58 @@ setInterval("toggleSound()",1);
 <font color="#33CC00"></font>
 <span class="STYLE1"></span>
                    <div id="clock"></div>
-              </div>
+			 <script type='text/javascript'>
+
+
+function hidden2() 
+{
+	var clock = document.getElementById("clock-box");
+　　if(clock.style.display == 'block') 
+	{
+　　 	clock.style.display = 'none';
+　　}
+	else 
+	{
+　　　　clock.style.display = 'none';
+　　}
+
+	clock.style.display = 'none';
+}
+
+i=0;
+id = setInterval("hidden2()",1);
+function show_hidden(obj) 
+{
+	if(500 > i)
+	{
+		obj.style.display = 'none';
+		console.log("show_hidden1111",i);
+		i = i + 1;
+	}
+	else
+	{
+		clearInterval(id);
+		if(obj.style.display == 'block') {
+	　　 obj.style.display = 'none';
+	　　} else {
+			
+	　　　　　obj.style.display = 'block';
+	　　}
+		console.log("show_hidden",i);
+	}
+}
+
+var sh = document.getElementById("wrap");
+sh.onclick = function()
+{
+	var div1 = document.getElementById("clock-box");
+	show_hidden(div1);
+	return false;
+}
+
+</script>
+			</div>  
+			  
                 <canvas id="canvas" width="1100" height="680"></canvas>
             </div>
             
